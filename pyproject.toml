@@ -1,0 +1,20 @@
+[project]
+name = "sequential-test-using-asos-dataset"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.116.1",
+    "matplotlib>=3.10.6",
+    "numpy>=2.3.3",
+    "pandas>=2.3.2",
+    "plotly>=6.3.0",
+    "requests>=2.32.5",
+    "savvy>=0.0.1",
+    "scipy>=1.16.2",
+    "seaborn>=0.13.2",
+    "stf>=0.2.4",
+    "streamlit>=1.49.1",
+    "uvicorn>=0.35.0",
+]

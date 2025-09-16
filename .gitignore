@@ -1,0 +1,5 @@
+.cursor/*
+.venv/*
+src/__pycache__/*
+venv/*
+.python-version

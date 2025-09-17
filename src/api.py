@@ -260,8 +260,8 @@ async def get_experiment_summary(experiment_id: str, variant_id: int, metric_id:
         
         return summary
         
-    except HTTPException:
-        raise
+    # except HTTPException:
+    #     raise
     except Exception as e:
         logger.error(f"Error getting experiment summary: {e}")
         raise HTTPException(status_code=500, detail=str(e))

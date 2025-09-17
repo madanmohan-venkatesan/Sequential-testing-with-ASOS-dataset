@@ -174,7 +174,6 @@ class DataPreprocessor:
         
         # Convert data types
         df_processed = self.convert_data_types(df)
-        
         logger.info("Data preprocessing completed successfully")
         return df_processed
     

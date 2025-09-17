@@ -18,6 +18,26 @@ class DataFilter:
     def __init__(self):
         """Initialize the data filter."""
         pass
+    def get_metric_type(self, metric_id: int) -> str:
+        """
+        Get the type of metric based on metric_id.
+    
+        Args:
+            metric_id: The metric identifier
+        
+        Returns:
+            str: Type of metric ('binary', 'count', 'continuous')
+        """
+        metric_types = {
+            1: 'binary',
+            2: 'count',
+            3: 'count',
+            4: 'continuous'
+        }
+        if metric_id not in metric_types:
+            raise ValueError(f"Invalid metric_id: {metric_id}. Valid values are 1, 2, 3, 4")
+        return metric_types[metric_id]
+
     
     def filter_data(self, df: pd.DataFrame, experiment_id: str, variant_id: int, metric_id: int) -> pd.DataFrame:
         """
@@ -95,6 +115,7 @@ class DataFilter:
             'experiment_id': experiment_id,
             'variant_id': variant_id,
             'metric_id': metric_id,
+            'metric_type': self.get_metric_type(metric_id),
             'data_points': len(filtered_df),
             'time_range': {
                 'start': filtered_df['time_since_start'].min(),

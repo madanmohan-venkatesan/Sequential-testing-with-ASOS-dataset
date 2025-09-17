@@ -284,7 +284,8 @@ class StreamlitApp:
                 metric_options[exp_id] = {}
             
             variant_options[exp_id][f"Variant {exp['variant_id']}"] = exp['variant_id']
-            metric_options[exp_id][f"Metric {exp['metric_id']} ({exp.get('metric_type', 'unknown')})"] = exp['metric_id']
+            # metric_options[exp_id][f"Metric {exp['metric_id']} ({exp.get('metric_type', 'unknown')})"] = exp['metric_id']
+            metric_options[exp_id][f"Metric {exp['metric_id']} ({exp['metric_type']})"] = exp['metric_id']
         
         # Experiment selection
         selected_exp_key = st.sidebar.selectbox(
@@ -353,11 +354,11 @@ class StreamlitApp:
             else:
                 st.error("❌ Analysis failed. Please check the parameters and try again.")
         
-        # Display previous results if available
-        if hasattr(self.session_state, 'analysis_results'):
-            st.markdown("---")
-            st.subheader("📈 Previous Analysis Results")
-            self.display_results(self.session_state.analysis_results)
+        # # Display previous results if available
+        # if hasattr(self.session_state, 'analysis_results'):
+        #     st.markdown("---")
+        #     st.subheader("📈 Previous Analysis Results")
+        #     self.display_results(self.session_state.analysis_results)
     
     def display_results(self, results: Dict[str, Any]):
         """Display analysis results."""

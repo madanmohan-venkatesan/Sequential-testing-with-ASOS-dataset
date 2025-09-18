@@ -12,7 +12,7 @@ import time
 
 # Import SAVVY and STF
 try:
-    import savvy
+    import savvi
     import stf
     SAVVY_STF_AVAILABLE = True
 except ImportError as e:

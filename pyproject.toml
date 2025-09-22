@@ -11,10 +11,14 @@ dependencies = [
     "pandas>=2.3.2",
     "plotly>=6.3.0",
     "requests>=2.32.5",
-    "savvy>=0.0.1",
+    "savvi",
     "scipy>=1.16.2",
     "seaborn>=0.13.2",
-    "stf>=0.2.4",
+    "sequential-testing-framework",
     "streamlit>=1.49.1",
     "uvicorn>=0.35.0",
 ]
+
+[tool.uv.sources]
+savvi = { git = "https://github.com/assuncaolfi/savvi" }
+sequential-testing-framework = { git = "https://github.com/madanmohan-venkatesan/Sequential-testing-framework-STF" }

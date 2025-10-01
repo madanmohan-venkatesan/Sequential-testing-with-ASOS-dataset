@@ -3,4 +3,3 @@
 src/__pycache__/*
 venv/*
 .python-version
-figures/*
